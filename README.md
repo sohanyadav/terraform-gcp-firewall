@@ -92,22 +92,22 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Inputs
 
-| Name | Description | Type | Default                                           | Required |
-|------|-------------|------|---------------------------------------------------|:--------:|
-| <a name="input_allow"></a> [allow](#input\_allow) | (Optional) The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection. | `list(any)` | `[]`                                              | no |
-| <a name="input_deny"></a> [deny](#input\_deny) | (Optional) The list of deny rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection. | `list(any)` | `[]`                                              | no |
-| <a name="input_direction"></a> [direction](#input\_direction) | Optional) Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, one of source\_ranges, source\_tags or source\_service\_accounts is required. Possible values are: INGRESS, EGRESS. | `string` | `"INGRESS"`                                       | no |
-| <a name="input_disabled"></a> [disabled](#input\_disabled) | (Optional) Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled. | `bool` | `false`                                           | no |
-| <a name="input_enabled"></a> [enabled](#input\_enabled) | A boolean flag to enable/disable firewall. | `bool` | `true`                                            | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""`                                              | no |
-| <a name="input_firewall_enabled"></a> [firewall\_enabled](#input\_firewall\_enabled) | A boolean flag to enable/disable firewall. | `bool` | `true`                                            | no |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_allow"></a> [allow](#input\_allow) | (Optional) The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection. | `list(any)` | `[]` | no |
+| <a name="input_deny"></a> [deny](#input\_deny) | (Optional) The list of deny rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection. | `list(any)` | `[]` | no |
+| <a name="input_direction"></a> [direction](#input\_direction) | Optional) Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, one of source\_ranges, source\_tags or source\_service\_accounts is required. Possible values are: INGRESS, EGRESS. | `string` | `"INGRESS"` | no |
+| <a name="input_disabled"></a> [disabled](#input\_disabled) | (Optional) Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled. | `bool` | `false` | no |
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | A boolean flag to enable/disable firewall. | `bool` | `true` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
+| <a name="input_firewall_enabled"></a> [firewall\_enabled](#input\_firewall\_enabled) | A boolean flag to enable/disable firewall. | `bool` | `true` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. sequence of application name and environment `name`,`environment`,'attribute' [`webserver`,`qa`,`devops`,`public`,] . | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy'sohanyadav'. | `string` | `"example"`                                       | no |
-| <a name="input_name"></a> [name](#input\_name) | Name of the resource. Provided by the client when the resource is created. | `string` | `""`                                              | no |
-| <a name="input_network"></a> [network](#input\_network) | (Required) The VPC network the subnets belong to. Only networks that are in the distributed mode can have subnetworks. | `string` | `""`                                              | no |
-| <a name="input_priority"></a> [priority](#input\_priority) | The priority of this route. | `number` | `1000`                                            | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `""`                                              | no |
-| <a name="input_source_ranges"></a> [source\_ranges](#input\_source\_ranges) | (Optional) If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges. | `any` | `[]`                                              | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy'sohanyadav'. | `string` | `"example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name of the resource. Provided by the client when the resource is created. | `string` | `""` | no |
+| <a name="input_network"></a> [network](#input\_network) | (Required) The VPC network the subnets belong to. Only networks that are in the distributed mode can have subnetworks. | `string` | `""` | no |
+| <a name="input_priority"></a> [priority](#input\_priority) | The priority of this route. | `number` | `1000` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `""` | no |
+| <a name="input_source_ranges"></a> [source\_ranges](#input\_source\_ranges) | (Optional) If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges. | `any` | `[]` | no |
 
 ## Outputs
 
